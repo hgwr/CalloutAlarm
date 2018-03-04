@@ -908,6 +908,9 @@ DQ
                             <constraint firstAttribute="bottom" secondItem="q5r-tE-VYd" secondAttribute="bottom" constant="12" id="nTt-Qy-fq1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="eYG-h4-GLM" id="buy-77-cod"/>
+                    </connections>
                 </viewController>
                 <customObject id="a5a-vx-UlE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
