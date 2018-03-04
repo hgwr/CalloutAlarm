@@ -24,7 +24,7 @@ class ViewController: NSViewController {
             let currentDate = Date()
             let timeStr = formatter.string(from: currentDate)
             self.timeLabel.stringValue = timeStr
-            NSLog("timer: %@", timeStr)
+            // NSLog("timer: %@", timeStr)
         }
     }
 
@@ -39,6 +39,12 @@ class ViewController: NSViewController {
             timer.invalidate()
             self.timer = nil
         }
+    }
+    
+    @IBAction func speechSwitchClicked(_ sender: NSButton) {
+        let checked = (sender.state == NSControl.StateValue.on)
+        NSLog("speech switch clicked: %@", checked ? "ON" : "OFF")
+        // TODO: ボタンの状態によって、読み上げするかどうか制御する
     }
 }
 

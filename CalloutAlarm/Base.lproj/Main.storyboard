@@ -869,6 +869,9 @@ DQ
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="speechSwitchClicked:" target="cJh-Nf-GgT" id="mo4-J2-X0V"/>
+                                        </connections>
                                     </button>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-h4-GLM">
                                         <rect key="frame" x="149" y="29" width="8" height="141"/>
