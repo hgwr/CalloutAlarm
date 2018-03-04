@@ -18,16 +18,13 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         NSLog("### ViewController#viewDidLoad called.")
 
-        self.timer = Timer(timeInterval: 1, repeats: true) { timer in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
             let currentDate = Date()
             let timeStr = formatter.string(from: currentDate)
             self.timeLabel.stringValue = timeStr
             NSLog("timer: %@", timeStr)
-        }
-        if let timer = self.timer {
-            RunLoop.current.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
         }
     }
 
