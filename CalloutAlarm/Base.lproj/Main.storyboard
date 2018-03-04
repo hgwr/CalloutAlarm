@@ -871,8 +871,8 @@ DQ
                                         </buttonCell>
                                     </button>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-h4-GLM">
-                                        <rect key="frame" x="-2" y="29" width="310" height="141"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="23:59" id="mjb-Gv-eaF">
+                                        <rect key="frame" x="149" y="29" width="8" height="141"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="mjb-Gv-eaF">
                                             <font key="font" size="100" name="Menlo-Regular"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
