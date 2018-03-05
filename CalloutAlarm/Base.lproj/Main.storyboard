@@ -787,6 +787,9 @@ DQ
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="8FE-u1-J9g"/>
+                                </connections>
                             </textField>
                             <textField identifier="timeSpeechFormatField" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-ip-bEh">
                                 <rect key="frame" x="233" y="188" width="300" height="22"/>
@@ -824,6 +827,9 @@ DQ
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="alK-bx-l6j"/>
+                                </connections>
                             </textField>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEE-QW-6c1">
                                 <rect key="frame" x="63" y="57" width="304" height="19"/>

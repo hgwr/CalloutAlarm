@@ -26,3 +26,21 @@ class SettingsViewController: NSViewController {
     @IBAction func startSpeechTestClicked(_ sender: Any) {
     }
 }
+
+extension SettingsViewController: NSTextViewDelegate {
+    func textDidChange(_ notification: Notification) {
+        NSLog("### extension SettingsViewController: NSTextViewDelegate: textDidChange")
+        
+        switch notification.object {
+            
+        case let textView as NSTextView where textView === self.startTimeStrField:
+            NSLog("startTimeStrField changed")
+            
+        case let textView as NSTextView where textView === self.finishTimeStrField:
+            NSLog("finishTimeStrField changed")
+            
+        default:
+            fatalError()
+        }
+    }
+}
