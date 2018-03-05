@@ -15,11 +15,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSLog("### applicationDidFinishLaunching called")
         
         let userDefaults = UserDefaults.standard
-        userDefaults.register(defaults: ["startTimeStr": "07:00",
-                                         "finishTimeStr": "08:01",
-                                         "speechTextAtTheStart": "おはようございます",
-                                         "timeSpeechFormat": "時刻は %h 時 %m 分です。",
-                                         "volumeStr": "50"])
+        let defaults: [String:Any] =
+            [CalloutAlarmKeys.startTimeStr: CalloutAlarmDefaults.startTimeStr,
+             CalloutAlarmKeys.finishTimeStr: CalloutAlarmDefaults.finishTimeStr,
+             CalloutAlarmKeys.speechTextAtTheStart: CalloutAlarmDefaults.speechTextAtTheStart,
+             CalloutAlarmKeys.timeSpeechFormat: CalloutAlarmDefaults.timeSpeechFormat,
+             CalloutAlarmKeys.volume: CalloutAlarmDefaults.volume]
+        userDefaults.register(defaults: defaults)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
