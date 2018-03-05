@@ -15,6 +15,8 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var timeSpeechFormatField: NSTextField!
     @IBOutlet weak var volumeSlider: NSSlider!
     
+    let utils = CalloutAlarmUtils()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -54,35 +56,30 @@ class SettingsViewController: NSViewController {
             
         case let textField as NSTextField where textField === self.startTimeStrField:
             let fieldValue = textField.stringValue
-            if validTimeFormat(fieldValue) {
+            if utils.validTimeFormat(fieldValue) {
                 userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.startTimeStr)
             }
             
         case let textField as NSTextField where textField === self.finishTimeStrField:
             let fieldValue = textField.stringValue
-            if validTimeFormat(fieldValue) {
+            if utils.validTimeFormat(fieldValue) {
                 userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.finishTimeStr)
             }
             
         case let textField as NSTextField where textField === self.speechTextAtTheStartField:
             let fieldValue = textField.stringValue
-            if validTimeFormat(fieldValue) {
+            if utils.validTimeFormat(fieldValue) {
                 userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.speechTextAtTheStart)
             }
             
         case let textField as NSTextField where textField === self.timeSpeechFormatField:
             let fieldValue = textField.stringValue
-            if validTimeFormat(fieldValue) {
+            if utils.validTimeFormat(fieldValue) {
                 userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.timeSpeechFormat)
             }
             
         default:
             break
         }
-    }
-    
-    func validTimeFormat(_ value: String) -> Bool {
-        // TODO: ちゃんと実装する
-        return true
     }
 }

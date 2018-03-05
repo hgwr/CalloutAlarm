@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		171B013A204D061100D5CA6D /* CalloutAlarmConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B0139204D061100D5CA6D /* CalloutAlarmConstants.swift */; };
+		171B013C204D176A00D5CA6D /* CalloutAlarmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B013B204D176A00D5CA6D /* CalloutAlarmUtils.swift */; };
 		17666A072048D3A2002852E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17666A062048D3A2002852E7 /* AppDelegate.swift */; };
 		17666A092048D3A3002852E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17666A082048D3A3002852E7 /* ViewController.swift */; };
 		17666A0B2048D3A3002852E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17666A0A2048D3A3002852E7 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		171B0139204D061100D5CA6D /* CalloutAlarmConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutAlarmConstants.swift; sourceTree = "<group>"; };
+		171B013B204D176A00D5CA6D /* CalloutAlarmUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutAlarmUtils.swift; sourceTree = "<group>"; };
 		17666A032048D3A2002852E7 /* CalloutAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalloutAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17666A062048D3A2002852E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17666A082048D3A3002852E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				17666A062048D3A2002852E7 /* AppDelegate.swift */,
 				171B0139204D061100D5CA6D /* CalloutAlarmConstants.swift */,
+				171B013B204D176A00D5CA6D /* CalloutAlarmUtils.swift */,
 				17666A082048D3A3002852E7 /* ViewController.swift */,
 				17EE1834204A5CCF000C8739 /* SettingsViewController.swift */,
 				17666A0A2048D3A3002852E7 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 				171B013A204D061100D5CA6D /* CalloutAlarmConstants.swift in Sources */,
 				17666A092048D3A3002852E7 /* ViewController.swift in Sources */,
 				17666A072048D3A2002852E7 /* AppDelegate.swift in Sources */,
+				171B013C204D176A00D5CA6D /* CalloutAlarmUtils.swift in Sources */,
 				17EE1835204A5CCF000C8739 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
