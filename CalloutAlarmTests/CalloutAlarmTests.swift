@@ -24,10 +24,14 @@ class CalloutAlarmTests: XCTestCase {
     func testUtilsValidTimeFormat() {
         let util = CalloutAlarmUtils()
         
-        XCTAssert(util.validTimeFormat("12:34"))
-        XCTAssert(util.validTimeFormat("2:34"))
+        XCTAssert(util.validTimeFormat("23:59"))
+        XCTAssert(util.validTimeFormat("00:00"))
         XCTAssert(util.validTimeFormat("02:34"))
 
+        XCTAssert(util.validTimeFormat("  12:34"))
+        XCTAssert(util.validTimeFormat("2:34  "))
+        XCTAssert(util.validTimeFormat(" 02:34 "))
+        
         XCTAssert(!util.validTimeFormat("a"))
         XCTAssert(!util.validTimeFormat("a2:34"))
         XCTAssert(!util.validTimeFormat("0234"))
