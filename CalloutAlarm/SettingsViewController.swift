@@ -17,30 +17,28 @@ class SettingsViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     @IBAction func timeSpeechTestClicked(_ sender: Any) {
+        NSLog("timeSpeechTestClicked")
     }
   
     @IBAction func startSpeechTestClicked(_ sender: Any) {
+        NSLog("startSpeechTestClicked")
     }
-}
 
-extension SettingsViewController: NSTextViewDelegate {
-    func textDidChange(_ notification: Notification) {
-        NSLog("### extension SettingsViewController: NSTextViewDelegate: textDidChange")
-        
+    override func controlTextDidChange(_ notification: Notification) {
         switch notification.object {
-            
-        case let textView as NSTextView where textView === self.startTimeStrField:
-            NSLog("startTimeStrField changed")
-            
-        case let textView as NSTextView where textView === self.finishTimeStrField:
-            NSLog("finishTimeStrField changed")
-            
+        case let textField as NSTextField where textField === self.startTimeStrField:
+            NSLog("startTimeStrField was changed")
+        case let textField as NSTextField where textField === self.finishTimeStrField:
+            NSLog("finishTimeStrField was changed")
+        case let textField as NSTextField where textField === self.speechTextAtTheStartField:
+            NSLog("speechTextAtTheStartField was changed")
+        case let textField as NSTextField where textField === self.timeSpeechFormatField:
+            NSLog("timeSpeechFormatField was changed")
         default:
-            fatalError()
+            break
         }
     }
 }
