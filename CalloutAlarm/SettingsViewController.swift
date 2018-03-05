@@ -42,7 +42,11 @@ class SettingsViewController: NSViewController {
     @IBAction func startSpeechTestClicked(_ sender: Any) {
         NSLog("startSpeechTestClicked")
     }
-
+    
+    @IBAction func volumeSliderChanged(_ sender: NSSlider) {
+        UserDefaults.standard.set(self.volumeSlider.integerValue, forKey: CalloutAlarmKeys.volume)
+    }
+    
     override func controlTextDidChange(_ notification: Notification) {
         let userDefaults = UserDefaults.standard
         

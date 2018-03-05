@@ -840,6 +840,9 @@ DQ
                                 <rect key="frame" x="63" y="57" width="304" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="77v-eG-7rR"/>
+                                <connections>
+                                    <action selector="volumeSliderChanged:" target="XfG-lQ-9wD" id="auU-eU-228"/>
+                                </connections>
                             </slider>
                         </subviews>
                     </view>
