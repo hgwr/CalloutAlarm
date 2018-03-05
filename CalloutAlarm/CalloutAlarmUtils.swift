@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Shigeru Hagiwara. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
 extension String {
     func matches(for regex: String) -> [String]? {
@@ -73,5 +73,11 @@ class CalloutAlarmUtils {
         } else {
             return false
         }
+    }
+    
+    func alert(_ message: String) {
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.runModal()
     }
 }

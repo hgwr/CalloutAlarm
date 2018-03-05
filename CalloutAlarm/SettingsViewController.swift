@@ -58,25 +58,29 @@ class SettingsViewController: NSViewController {
             let fieldValue = textField.stringValue
             if utils.validTimeFormat(fieldValue) {
                 userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.startTimeStr)
+            } else {
+                let startTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ?? CalloutAlarmDefaults.startTimeStr
+                textField.stringValue = startTimeStr
+                utils.alert("時刻は「12:34」のような形式で入力してください。")
             }
             
         case let textField as NSTextField where textField === self.finishTimeStrField:
             let fieldValue = textField.stringValue
             if utils.validTimeFormat(fieldValue) {
                 userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.finishTimeStr)
+            } else {
+                let startTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ?? CalloutAlarmDefaults.startTimeStr
+                textField.stringValue = startTimeStr
+                utils.alert("時刻は「12:34」のような形式で入力してください。")
             }
             
         case let textField as NSTextField where textField === self.speechTextAtTheStartField:
             let fieldValue = textField.stringValue
-            if utils.validTimeFormat(fieldValue) {
-                userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.speechTextAtTheStart)
-            }
+            userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.speechTextAtTheStart)
             
         case let textField as NSTextField where textField === self.timeSpeechFormatField:
             let fieldValue = textField.stringValue
-            if utils.validTimeFormat(fieldValue) {
-                userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.timeSpeechFormat)
-            }
+            userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.timeSpeechFormat)
             
         default:
             break
