@@ -49,6 +49,10 @@ class SettingsViewController: NSViewController {
         UserDefaults.standard.set(self.volumeSlider.integerValue, forKey: CalloutAlarmKeys.volume)
     }
     
+    @IBAction func okButtonClicked(_ sender: Any) {
+        self.view.window!.close()
+    }
+    
     override func controlTextDidChange(_ notification: Notification) {
         let userDefaults = UserDefaults.standard
         
