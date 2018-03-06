@@ -51,6 +51,41 @@ extension Array {
 }
 
 class CalloutAlarmUtils {
+
+    // MARK: - Callout Alarm Data Accessor: UserDefaults wrappers
+    
+    let calendar = Calendar(identifier: .gregorian)
+    
+    var currentYmd: [Int] {
+        get {
+            let now = Date()
+            let year = calendar.component(.year, from: now)
+            let month = calendar.component(.month, from: now)
+            let day = calendar.component(.day, from: now)
+            return [year, month, day]
+        }
+    }
+
+    var startTime: Date? {
+        get {
+            let startTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ??
+                CalloutAlarmDefaults.startTimeStr
+            
+            guard let matches = startTimeStr.matches(for: "([0-9]+):([0-9]+)") else {
+                return nil
+            }
+            let hour = Int(matches[1])
+            let minute = Int(matches[2])
+            let ymd = self.currentYmd
+            let startTime = calendar.date(from: DateComponents(year: ymd[0], month: ymd[1], day: ymd[2],
+                                                               hour: hour, minute: minute))
+            
+            return startTime
+        }
+    }
+    
+    // MARK: - Validation
+    
     func parseTimeStr(_ text: String) -> [Int]? {
         if let matches = text.strip.matches(for: "^([0-9]+):([0-9]+)$"),
             matches.count == 3,
@@ -74,6 +109,8 @@ class CalloutAlarmUtils {
             return false
         }
     }
+    
+    // MARK: - Alert Message Dialog
     
     func alert(_ message: String) {
         let alert = NSAlert()

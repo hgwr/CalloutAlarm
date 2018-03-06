@@ -38,4 +38,18 @@ class CalloutAlarmTests: XCTestCase {
         XCTAssert(!util.validTimeFormat("34:34"))
         XCTAssert(!util.validTimeFormat("12:62"))
     }
+    
+    func testStartTime() {
+        let util = CalloutAlarmUtils()
+        
+        UserDefaults.standard.set("07:31", forKey: CalloutAlarmKeys.startTimeStr)
+        guard let startTime = util.startTime else {
+            fatalError("startTime must not be nil")
+        }
+        let calendar = Calendar(identifier: .gregorian)
+        let hour = calendar.component(.hour, from: startTime)
+        XCTAssertEqual(hour, 7)
+        let minute = calendar.component(.minute, from: startTime)
+        XCTAssertEqual(minute, 31)
+    }
 }
