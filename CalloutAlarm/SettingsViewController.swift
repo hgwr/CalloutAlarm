@@ -57,7 +57,7 @@ class SettingsViewController: NSViewController {
         self.view.window!.close()
     }
     
-    override func controlTextDidChange(_ notification: Notification) {
+    override func controlTextDidEndEditing(_ notification: Notification) {
         let userDefaults = UserDefaults.standard
         
         switch notification.object {
