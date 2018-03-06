@@ -102,6 +102,14 @@ class CalloutAlarmUtils {
         }
     }
     
+    var speechIntervalSec: Int? {
+        get {
+            let intervalStr = UserDefaults.standard.string(forKey: CalloutAlarmKeys.speechIntervalStr) ??
+                CalloutAlarmDefaults.speechIntervalStr
+            return Int(intervalStr)
+        }
+    }
+    
     // MARK: - Validation
     
     func parseTimeStr(_ text: String) -> [Int]? {

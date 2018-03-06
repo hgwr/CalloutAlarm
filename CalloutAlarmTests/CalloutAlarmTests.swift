@@ -66,4 +66,13 @@ class CalloutAlarmTests: XCTestCase {
         let minute = calendar.component(.minute, from: finishTime)
         XCTAssertEqual(minute, 32)
     }
+    
+    func testSpeechIntervalSec() {
+        let util = CalloutAlarmUtils()
+        UserDefaults.standard.set("123", forKey: CalloutAlarmKeys.speechIntervalStr)
+        guard let interval = util.speechIntervalSec else {
+            fatalError("interval must not be nil")
+        }
+        XCTAssertEqual(interval, 123)
+    }
 }
