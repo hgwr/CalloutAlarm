@@ -964,6 +964,7 @@ DQ
                     </view>
                     <connections>
                         <outlet property="finishTimeStrField" destination="gYJ-Co-tvy" id="s5A-00-1bH"/>
+                        <outlet property="speechIntervalStrField" destination="9ZK-2j-opA" id="G1G-Vg-Qzi"/>
                         <outlet property="speechTextAtTheStartField" destination="8rj-c3-fqn" id="9Rv-7D-L46"/>
                         <outlet property="startTimeStrField" destination="Pdm-yN-INI" id="5c7-6Z-IVW"/>
                         <outlet property="timeSpeechFormatField" destination="Vch-ip-bEh" id="HyZ-ne-atc"/>

@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let defaults: [String:Any] =
             [CalloutAlarmKeys.startTimeStr: CalloutAlarmDefaults.startTimeStr,
              CalloutAlarmKeys.finishTimeStr: CalloutAlarmDefaults.finishTimeStr,
+             CalloutAlarmKeys.speechIntervalStr: CalloutAlarmDefaults.speechIntervalStr,
              CalloutAlarmKeys.speechTextAtTheStart: CalloutAlarmDefaults.speechTextAtTheStart,
              CalloutAlarmKeys.timeSpeechFormat: CalloutAlarmDefaults.timeSpeechFormat,
              CalloutAlarmKeys.volume: CalloutAlarmDefaults.volume]

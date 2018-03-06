@@ -11,6 +11,7 @@ import Cocoa
 class SettingsViewController: NSViewController {
     @IBOutlet weak var startTimeStrField: NSTextField!
     @IBOutlet weak var finishTimeStrField: NSTextField!
+    @IBOutlet weak var speechIntervalStrField: NSTextField!
     @IBOutlet weak var speechTextAtTheStartField: NSTextField!
     @IBOutlet weak var timeSpeechFormatField: NSTextField!
     @IBOutlet weak var volumeSlider: NSSlider!
@@ -22,19 +23,22 @@ class SettingsViewController: NSViewController {
     }
     
     override func viewWillAppear() {
+        let userDefaults = UserDefaults.standard
         guard
-            let startTimeStr = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr),
-            let finishTimeStr = UserDefaults.standard.string(forKey: CalloutAlarmKeys.finishTimeStr),
-            let speechTextAtTheStart = UserDefaults.standard.string(forKey: CalloutAlarmKeys.speechTextAtTheStart),
-            let timeSpeechFormat = UserDefaults.standard.string(forKey: CalloutAlarmKeys.timeSpeechFormat)
+            let startTimeStr = userDefaults.string(forKey: CalloutAlarmKeys.startTimeStr),
+            let finishTimeStr = userDefaults.string(forKey: CalloutAlarmKeys.finishTimeStr),
+            let speechIntervalStr = userDefaults.string(forKey: CalloutAlarmKeys.speechIntervalStr),
+            let speechTextAtTheStart = userDefaults.string(forKey: CalloutAlarmKeys.speechTextAtTheStart),
+            let timeSpeechFormat = userDefaults.string(forKey: CalloutAlarmKeys.timeSpeechFormat)
             else {
                 fatalError("default not set??")
         }
         self.startTimeStrField.stringValue = startTimeStr
         self.finishTimeStrField.stringValue = finishTimeStr
+        self.speechIntervalStrField.stringValue = speechIntervalStr
         self.speechTextAtTheStartField.stringValue = speechTextAtTheStart
         self.timeSpeechFormatField.stringValue = timeSpeechFormat
-        self.volumeSlider.integerValue = UserDefaults.standard.integer(forKey: CalloutAlarmKeys.volume)
+        self.volumeSlider.integerValue = userDefaults.integer(forKey: CalloutAlarmKeys.volume)
     }
     
     @IBAction func timeSpeechTestClicked(_ sender: Any) {
