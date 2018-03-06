@@ -84,6 +84,24 @@ class CalloutAlarmUtils {
         }
     }
     
+    var finishTime: Date? {
+        get {
+            let finishTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.finishTimeStr) ??
+                CalloutAlarmDefaults.finishTimeStr
+            
+            guard let matches = finishTimeStr.matches(for: "([0-9]+):([0-9]+)") else {
+                return nil
+            }
+            let hour = Int(matches[1])
+            let minute = Int(matches[2])
+            let ymd = self.currentYmd
+            let finishTime = calendar.date(from: DateComponents(year: ymd[0], month: ymd[1], day: ymd[2],
+                                                               hour: hour, minute: minute))
+            
+            return finishTime
+        }
+    }
+    
     // MARK: - Validation
     
     func parseTimeStr(_ text: String) -> [Int]? {

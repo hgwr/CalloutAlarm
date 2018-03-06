@@ -52,4 +52,18 @@ class CalloutAlarmTests: XCTestCase {
         let minute = calendar.component(.minute, from: startTime)
         XCTAssertEqual(minute, 31)
     }
+
+    func testFinishTime() {
+        let util = CalloutAlarmUtils()
+        
+        UserDefaults.standard.set("08:32", forKey: CalloutAlarmKeys.finishTimeStr)
+        guard let finishTime = util.finishTime else {
+            fatalError("finishTime must not be nil")
+        }
+        let calendar = Calendar(identifier: .gregorian)
+        let hour = calendar.component(.hour, from: finishTime)
+        XCTAssertEqual(hour, 8)
+        let minute = calendar.component(.minute, from: finishTime)
+        XCTAssertEqual(minute, 32)
+    }
 }
