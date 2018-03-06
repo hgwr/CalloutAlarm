@@ -65,7 +65,7 @@ class SettingsViewController: NSViewController {
         case let textField as NSTextField where textField === self.startTimeStrField:
             let fieldValue = textField.stringValue
             if utils.validTimeFormat(fieldValue) {
-                userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.startTimeStr)
+                userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.startTimeStr)
             } else {
                 let startTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ?? CalloutAlarmDefaults.startTimeStr
                 textField.stringValue = startTimeStr
@@ -75,20 +75,33 @@ class SettingsViewController: NSViewController {
         case let textField as NSTextField where textField === self.finishTimeStrField:
             let fieldValue = textField.stringValue
             if utils.validTimeFormat(fieldValue) {
-                userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.finishTimeStr)
+                userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.finishTimeStr)
             } else {
-                let startTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ?? CalloutAlarmDefaults.startTimeStr
-                textField.stringValue = startTimeStr
+                let finishTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.finishTimeStr) ?? CalloutAlarmDefaults.finishTimeStr
+                textField.stringValue = finishTimeStr
                 utils.alert("時刻は「12:34」のような形式で入力してください。")
+            }
+            
+        case let textField as NSTextField where textField === self.speechIntervalStrField:
+            let fieldValue = textField.stringValue
+            if let matches = fieldValue.strip.matches(for: "^([0-9]+)$"),
+                matches.count == 2,
+                let intervalSec = Int(matches[1]),
+                intervalSec >= 30 && intervalSec <= 60 * 60 * 2 {
+                userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.speechIntervalStr)
+            } else {
+                let speechIntervalStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.speechIntervalStr) ?? CalloutAlarmDefaults.speechIntervalStr
+                textField.stringValue = speechIntervalStr
+                utils.alert("読み上げ間隔(秒)は、「180」のような形式で入力してください。30 から 7200 が有効な値です。")
             }
             
         case let textField as NSTextField where textField === self.speechTextAtTheStartField:
             let fieldValue = textField.stringValue
-            userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.speechTextAtTheStart)
+            userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.speechTextAtTheStart)
             
         case let textField as NSTextField where textField === self.timeSpeechFormatField:
             let fieldValue = textField.stringValue
-            userDefaults.set(fieldValue, forKey: CalloutAlarmKeys.timeSpeechFormat)
+            userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.timeSpeechFormat)
             
         default:
             break
