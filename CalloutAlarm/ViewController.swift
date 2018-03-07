@@ -28,6 +28,8 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // TODO: 読み上げ台詞キューを作成
 
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             let formatter = DateFormatter()
@@ -36,7 +38,10 @@ class ViewController: NSViewController {
             let timeStr = formatter.string(from: currentDate)
             self.timeLabel.stringValue = timeStr
             
-            // TODO: 該当時刻かつ speechSwitch が ON だったら、時刻読み上げ
+            // TODO: 該当時刻かつ speechSwitch が ON だったら、
+            // 読み上げ台詞キューから台詞を取り出して、時刻読み上げ
+            // 範囲時間外
+            // 状態管理
             
             if (self.shouldSpeech) {
                 // let player = SpeechPlayer(volume: self.utils.speechVolume)
