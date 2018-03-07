@@ -81,4 +81,11 @@ class CalloutAlarmTests: XCTestCase {
         UserDefaults.standard.set(56, forKey: CalloutAlarmKeys.volume)
         XCTAssertEqual(util.speechVolume, 0.56, accuracy: 0.001)
     }
+    
+    func testTimeSpeechText() {
+        let util = CalloutAlarmUtils()
+        UserDefaults.standard.set("時刻は%h時%m分です。", forKey: CalloutAlarmKeys.timeSpeechFormat)
+        XCTAssertEqual(util.timeSpeechText(hour: 5, minute: 4), "時刻は5時4分です。")
+        XCTAssertEqual(util.timeSpeechText(hour: 15, minute: 14), "時刻は15時14分です。")
+    }
 }

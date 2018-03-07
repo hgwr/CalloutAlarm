@@ -124,6 +124,20 @@ class CalloutAlarmUtils {
         }
     }
     
+    var timeSpeechFormat: String {
+        get {
+            return UserDefaults.standard.string(forKey: CalloutAlarmKeys.timeSpeechFormat) ??
+                CalloutAlarmDefaults.timeSpeechFormat
+        }
+    }
+    
+    func timeSpeechText(hour: Int, minute: Int) -> String {
+        let text = self.timeSpeechFormat
+            .replacingOccurrences(of: "%h", with: String(format: "%d", hour))
+            .replacingOccurrences(of: "%m", with: String(format: "%d", minute))
+        return text
+    }
+    
     // MARK: - Validation
     
     func parseTimeStr(_ text: String) -> [Int]? {
