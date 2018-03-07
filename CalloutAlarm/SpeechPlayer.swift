@@ -61,7 +61,7 @@ class SpeechPlayer: NSObject, NSSpeechSynthesizerDelegate {
         }
     }
 
-    func play(_ text: String) {
+    func say(_ text: String) {
         guard let speechSynth = self.speechSynth else {
             fatalError("speechSynth is nil")
         }

@@ -21,7 +21,7 @@ class SpeechPlayerTests: XCTestCase {
         super.tearDown()
     }
 
-    func testSpeech() {
+    func testSay() {
         let player = SpeechPlayer()
         
         let speechFinishExpectation = self.expectation(description: "speech finished")
@@ -31,7 +31,7 @@ class SpeechPlayerTests: XCTestCase {
         }
         player.rate = 160
         player.volume = 0.9
-        player.play("おはようございます。これはテストです。")
+        player.say("おはようございます。これはテストです。")
         waitForExpectations(timeout: 15) { error in
             if let error = error {
                 XCTFail(error.localizedDescription)

@@ -47,6 +47,9 @@ class SettingsViewController: NSViewController {
   
     @IBAction func startSpeechTestClicked(_ sender: Any) {
         NSLog("startSpeechTestClicked")
+        let player = SpeechPlayer()
+        player.volume = utils.speechVolume
+        player.say(utils.speechTextAtTheStart)
     }
     
     @IBAction func volumeSliderChanged(_ sender: NSSlider) {

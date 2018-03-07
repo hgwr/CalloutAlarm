@@ -117,6 +117,13 @@ class CalloutAlarmUtils {
         }
     }
     
+    var speechTextAtTheStart: String {
+        get {
+            return UserDefaults.standard.string(forKey: CalloutAlarmKeys.speechTextAtTheStart) ??
+            CalloutAlarmDefaults.speechTextAtTheStart
+        }
+    }
+    
     // MARK: - Validation
     
     func parseTimeStr(_ text: String) -> [Int]? {
