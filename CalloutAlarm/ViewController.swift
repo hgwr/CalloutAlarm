@@ -14,6 +14,7 @@ class ViewController: NSViewController, AlarmEventHandler {
     @IBOutlet weak var shouldSpeechSwitchButton: NSButton!
     
     let utils = CalloutAlarmUtils()
+    let libretto = Libretto()
     
     var timer: Timer?
     var stateManager = AlarmStateManager()
@@ -29,20 +30,27 @@ class ViewController: NSViewController, AlarmEventHandler {
     
     func onStartActive() {
         NSLog("onStartActive")
+        libretto.reset()
+        // TODO: start caffeinate
     }
     
     func onActive() {
-        NSLog("onActive")
-
         if (self.shouldSpeech) {
-            NSLog(self.utils.currentTimeSpeechText)
-            // let player = SpeechPlayer(volume: self.utils.speechVolume)
-            // player.say(self.utils.currentTimeSpeechText)
+            var speechLine = ""
+            if let prelude = libretto.getPrelude() {
+                speechLine = prelude
+            }
+            if let line = libretto.getSpeechLine() {
+                speechLine += " " + line
+            }
+            let player = SpeechPlayer(volume: self.utils.speechVolume)
+            player.say(speechLine)
         }
     }
     
     func onStartInactive() {
         NSLog("onStartInactive")
+        // TODO: finish caffeinate
     }
     
     override func viewDidLoad() {

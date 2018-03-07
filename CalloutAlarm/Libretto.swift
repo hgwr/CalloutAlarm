@@ -12,9 +12,14 @@ import Foundation
 class Libretto {
     let utils = CalloutAlarmUtils()
     let calendar = Calendar(identifier: .gregorian)
+    let formatter = DateFormatter()
     
     var queue: [String: String] = [:]
     var prelude: String? = nil
+    
+    init() {
+        formatter.dateFormat = "hh:mm"
+    }
     
     func reset() {
         prelude = utils.speechTextAtTheStart
@@ -27,9 +32,6 @@ class Libretto {
             fatalError("couldn't get startTime or finishTime or intervalSec")
         }
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm"
-        
         var t = startTime
         while t <= finishTime {
             let timeStr = formatter.string(from: t)
@@ -39,5 +41,22 @@ class Libretto {
             self.queue[timeStr] = speechLine
             t = calendar.date(byAdding: .second, value: intervalSec, to: t)!
         }
+    }
+    
+    func getPrelude() -> String? {
+        if let prelude = self.prelude {
+            self.prelude = nil
+            return prelude
+        }
+        return nil
+    }
+    
+    func getSpeechLine(time: Date = Date()) -> String? {
+        let timeStr = formatter.string(from: time)
+        if let speechLine = self.queue[timeStr] {
+            self.queue[timeStr] = nil
+            return speechLine
+        }
+        return nil
     }
 }
