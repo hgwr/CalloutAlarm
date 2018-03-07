@@ -23,5 +23,5 @@ struct CalloutAlarmDefaults {
     static let speechIntervalStr = "180"
     static let speechTextAtTheStart = "おはようございます"
     static let timeSpeechFormat = "時刻は %h 時 %m 分です。"
-    static let volume: Int = 50
+    static let volume: Int = 90
 }

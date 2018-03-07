@@ -75,4 +75,10 @@ class CalloutAlarmTests: XCTestCase {
         }
         XCTAssertEqual(interval, 123)
     }
+    
+    func testSpeechVolume() {
+        let util = CalloutAlarmUtils()
+        UserDefaults.standard.set(56, forKey: CalloutAlarmKeys.volume)
+        XCTAssertEqual(util.speechVolume, 0.56, accuracy: 0.001)
+    }
 }

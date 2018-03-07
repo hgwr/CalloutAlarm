@@ -110,6 +110,13 @@ class CalloutAlarmUtils {
         }
     }
     
+    var speechVolume: Float {
+        get {
+            let volumeInt = UserDefaults.standard.integer(forKey: CalloutAlarmKeys.volume)
+            return (Float(volumeInt) / 100.0)
+        }
+    }
+    
     // MARK: - Validation
     
     func parseTimeStr(_ text: String) -> [Int]? {
