@@ -16,7 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let userDefaults = UserDefaults.standard
         let defaults: [String:Any] =
-            [CalloutAlarmKeys.startTimeStr: CalloutAlarmDefaults.startTimeStr,
+            [CalloutAlarmKeys.shouldSpeech: CalloutAlarmDefaults.shouldSpeech,
+             CalloutAlarmKeys.startTimeStr: CalloutAlarmDefaults.startTimeStr,
              CalloutAlarmKeys.finishTimeStr: CalloutAlarmDefaults.finishTimeStr,
              CalloutAlarmKeys.speechIntervalStr: CalloutAlarmDefaults.speechIntervalStr,
              CalloutAlarmKeys.speechTextAtTheStart: CalloutAlarmDefaults.speechTextAtTheStart,
@@ -28,7 +29,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
 

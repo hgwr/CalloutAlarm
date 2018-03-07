@@ -714,10 +714,10 @@
                                 <rect key="frame" x="20" y="56" width="544" height="225"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-aC-HZ1">
-                                        <rect key="frame" x="0.0" y="203" width="175" height="22"/>
+                                        <rect key="frame" x="0.0" y="203" width="544" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xUY-8q-OCw">
-                                                <rect key="frame" x="-2" y="5" width="107" height="13"/>
+                                                <rect key="frame" x="-2" y="3" width="108" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ開始時刻: " id="ncw-XM-yfA">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -725,7 +725,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="startTimeStrField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pdm-yN-INI">
-                                                <rect key="frame" x="111" y="0.0" width="64" height="22"/>
+                                                <rect key="frame" x="112" y="0.0" width="432" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="07:00" drawsBackground="YES" id="eHj-oq-aDj">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -746,10 +746,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL4-a7-xsL">
-                                        <rect key="frame" x="0.0" y="173" width="175" height="22"/>
+                                        <rect key="frame" x="0.0" y="173" width="544" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-kk-tqy">
-                                                <rect key="frame" x="-2" y="5" width="107" height="13"/>
+                                                <rect key="frame" x="-2" y="3" width="108" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ終了時刻: " id="0w8-Ce-Ryh">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -757,7 +757,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="finishTimeStrField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gYJ-Co-tvy">
-                                                <rect key="frame" x="111" y="0.0" width="64" height="22"/>
+                                                <rect key="frame" x="112" y="0.0" width="432" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="08:01" drawsBackground="YES" id="jwH-Mx-RfC">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -778,10 +778,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYu-6P-eog">
-                                        <rect key="frame" x="0.0" y="143" width="204" height="22"/>
+                                        <rect key="frame" x="0.0" y="143" width="544" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-jy-kmi">
-                                                <rect key="frame" x="-2" y="5" width="104" height="13"/>
+                                                <rect key="frame" x="-2" y="3" width="104" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ間隔(秒): " id="d3z-0q-sL0">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -789,7 +789,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-2j-opA">
-                                                <rect key="frame" x="108" y="0.0" width="96" height="22"/>
+                                                <rect key="frame" x="108" y="0.0" width="436" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="TNh-GW-uWf">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -810,10 +810,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csu-eN-5ew">
-                                        <rect key="frame" x="0.0" y="113" width="507" height="22"/>
+                                        <rect key="frame" x="0.0" y="113" width="544" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mId-I4-iVC">
-                                                <rect key="frame" x="-2" y="5" width="203" height="13"/>
+                                                <rect key="frame" x="-2" y="3" width="204" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="時刻読み上げセリフのフォーマット: " id="qBp-3f-dMS">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -821,7 +821,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="timeSpeechFormatField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-ip-bEh">
-                                                <rect key="frame" x="207" y="0.0" width="300" height="22"/>
+                                                <rect key="frame" x="208" y="0.0" width="336" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="時刻は %h 時 %m 分です。" drawsBackground="YES" id="gCS-kd-Jgm">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -852,10 +852,10 @@
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-lY-mqx">
-                                        <rect key="frame" x="0.0" y="54" width="447" height="22"/>
+                                        <rect key="frame" x="0.0" y="54" width="544" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ORJ-mB-Dlw">
-                                                <rect key="frame" x="-2" y="5" width="143" height="13"/>
+                                                <rect key="frame" x="-2" y="3" width="144" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ開始時のセリフ: " id="OLE-kt-z2v">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -863,7 +863,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="speechTextAtTheStart" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-c3-fqn">
-                                                <rect key="frame" x="147" y="0.0" width="300" height="22"/>
+                                                <rect key="frame" x="148" y="0.0" width="396" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="おはようございます" drawsBackground="YES" id="XeM-VO-hw7">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -894,7 +894,7 @@
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-MC-rnA">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="544" height="17"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5C6-uR-1X1">
                                                 <rect key="frame" x="-2" y="0.0" width="29" height="17"/>
@@ -905,7 +905,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DEE-QW-6c1">
-                                                <rect key="frame" x="31" y="-1" width="304" height="19"/>
+                                                <rect key="frame" x="31" y="-1" width="515" height="19"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="77v-eG-7rR"/>
                                                 <connections>
                                                     <action selector="volumeSliderChanged:" target="XfG-lQ-9wD" id="auU-eU-228"/>
@@ -1017,7 +1017,7 @@ DQ
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="speechSwitchClicked:" target="cJh-Nf-GgT" id="mo4-J2-X0V"/>
+                                            <action selector="speechSwitchClicked:" target="cJh-Nf-GgT" id="1vK-bV-E9Q"/>
                                         </connections>
                                     </button>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-h4-GLM">
@@ -1059,6 +1059,7 @@ DQ
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="shouldSpeechSwitchButton" destination="UG6-F1-noO" id="Xeu-pv-PIt"/>
                         <outlet property="timeLabel" destination="eYG-h4-GLM" id="buy-77-cod"/>
                     </connections>
                 </viewController>

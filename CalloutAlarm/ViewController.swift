@@ -11,12 +11,23 @@ import Cocoa
 class ViewController: NSViewController {
 
     @IBOutlet weak var timeLabel: NSTextField!
+    @IBOutlet weak var shouldSpeechSwitchButton: NSButton!
+    
+    let utils = CalloutAlarmUtils()
     
     var timer: Timer?
     
+    var shouldSpeech: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: CalloutAlarmKeys.shouldSpeech)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: CalloutAlarmKeys.shouldSpeech)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSLog("### ViewController#viewDidLoad called.")
 
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             let formatter = DateFormatter()
@@ -24,8 +35,22 @@ class ViewController: NSViewController {
             let currentDate = Date()
             let timeStr = formatter.string(from: currentDate)
             self.timeLabel.stringValue = timeStr
-            // NSLog("timer: %@", timeStr)
+            
+            // TODO: 該当時刻かつ speechSwitch が ON だったら、時刻読み上げ
+            
+            if (self.shouldSpeech) {
+                // let player = SpeechPlayer(volume: self.utils.speechVolume)
+                // player.say(self.utils.currentTimeSpeechText)
+                NSLog(self.utils.currentTimeSpeechText)
+            }
         }
+    }
+    
+    override func viewWillAppear() {
+        let shouldSpeech = self.shouldSpeech
+        
+        self.shouldSpeechSwitchButton.state = shouldSpeech ?
+            NSControl.StateValue.on : NSControl.StateValue.off
     }
 
     override var representedObject: Any? {
@@ -43,8 +68,6 @@ class ViewController: NSViewController {
     
     @IBAction func speechSwitchClicked(_ sender: NSButton) {
         let checked = (sender.state == NSControl.StateValue.on)
-        NSLog("speech switch clicked: %@", checked ? "ON" : "OFF")
-        // TODO: ボタンの状態によって、読み上げするかどうか制御する
+        self.shouldSpeech = checked
     }
 }
-
