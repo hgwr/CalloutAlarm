@@ -19,6 +19,8 @@
 		17FFC574204F63A800C1253D /* SpeechPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFC573204F63A800C1253D /* SpeechPlayer.swift */; };
 		17FFC576204F640900C1253D /* SpeechPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFC575204F640900C1253D /* SpeechPlayerTests.swift */; };
 		17FFC578204FA28500C1253D /* AlarmStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFC577204FA28500C1253D /* AlarmStateManager.swift */; };
+		17FFC57A204FA96D00C1253D /* Libretto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFC579204FA96D00C1253D /* Libretto.swift */; };
+		17FFC57C204FACE000C1253D /* LibrettoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFC57B204FACE000C1253D /* LibrettoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		17FFC573204F63A800C1253D /* SpeechPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayer.swift; sourceTree = "<group>"; };
 		17FFC575204F640900C1253D /* SpeechPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayerTests.swift; sourceTree = "<group>"; };
 		17FFC577204FA28500C1253D /* AlarmStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStateManager.swift; sourceTree = "<group>"; };
+		17FFC579204FA96D00C1253D /* Libretto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libretto.swift; sourceTree = "<group>"; };
+		17FFC57B204FACE000C1253D /* LibrettoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrettoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				171B0139204D061100D5CA6D /* CalloutAlarmConstants.swift */,
 				171B013B204D176A00D5CA6D /* CalloutAlarmUtils.swift */,
 				17FFC577204FA28500C1253D /* AlarmStateManager.swift */,
+				17FFC579204FA96D00C1253D /* Libretto.swift */,
 				17FFC573204F63A800C1253D /* SpeechPlayer.swift */,
 				17666A082048D3A3002852E7 /* ViewController.swift */,
 				17EE1834204A5CCF000C8739 /* SettingsViewController.swift */,
@@ -128,6 +133,7 @@
 			children = (
 				17666A192048D3A3002852E7 /* CalloutAlarmTests.swift */,
 				17FFC575204F640900C1253D /* SpeechPlayerTests.swift */,
+				17FFC57B204FACE000C1253D /* LibrettoTests.swift */,
 				17666A1B2048D3A3002852E7 /* Info.plist */,
 			);
 			path = CalloutAlarmTests;
@@ -281,6 +287,7 @@
 				17666A072048D3A2002852E7 /* AppDelegate.swift in Sources */,
 				171B013C204D176A00D5CA6D /* CalloutAlarmUtils.swift in Sources */,
 				17EE1835204A5CCF000C8739 /* SettingsViewController.swift in Sources */,
+				17FFC57A204FA96D00C1253D /* Libretto.swift in Sources */,
 				17FFC578204FA28500C1253D /* AlarmStateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +298,7 @@
 			files = (
 				17FFC576204F640900C1253D /* SpeechPlayerTests.swift in Sources */,
 				17666A1A2048D3A3002852E7 /* CalloutAlarmTests.swift in Sources */,
+				17FFC57C204FACE000C1253D /* LibrettoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
