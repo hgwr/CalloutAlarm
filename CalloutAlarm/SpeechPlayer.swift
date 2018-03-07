@@ -18,15 +18,19 @@ class SpeechPlayer: NSObject, NSSpeechSynthesizerDelegate {
     
     var speechFinishCallback: ((SpeechPlayer) -> ())?
     
-    override init() {
+    init(volume: Float) {
         let voiceName = NSSpeechSynthesizer.VoiceName(rawValue: SpeechPlayer.kyoko)
         self.speechSynth = NSSpeechSynthesizer(voice: voiceName)
         super.init()
         if let ss = self.speechSynth {
             ss.delegate = self
             ss.rate = SpeechPlayer.defaultRate
-            ss.volume = SpeechPlayer.defaultVolume
+            ss.volume = volume
         }
+    }
+    
+    convenience override init() {
+        self.init(volume: SpeechPlayer.defaultVolume)
     }
     
     var rate: Float? {

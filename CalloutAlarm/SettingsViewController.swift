@@ -46,14 +46,15 @@ class SettingsViewController: NSViewController {
     }
   
     @IBAction func startSpeechTestClicked(_ sender: Any) {
-        NSLog("startSpeechTestClicked")
-        let player = SpeechPlayer()
-        player.volume = utils.speechVolume
+        NSLog("startSpeechTestClicked: volume = %f", utils.speechVolume)
+        let player = SpeechPlayer(volume: utils.speechVolume)
         player.say(utils.speechTextAtTheStart)
     }
     
     @IBAction func volumeSliderChanged(_ sender: NSSlider) {
         UserDefaults.standard.set(self.volumeSlider.integerValue, forKey: CalloutAlarmKeys.volume)
+        NSLog("volumeSliderChanged: self.volumeSlider.integerValue = %d", self.volumeSlider.integerValue)
+        NSLog("utils.speechVolume = %f", utils.speechVolume)
     }
     
     @IBAction func okButtonClicked(_ sender: Any) {
