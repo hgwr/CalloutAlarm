@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, AlarmEventHandler {
 
     @IBOutlet weak var timeLabel: NSTextField!
     @IBOutlet weak var shouldSpeechSwitchButton: NSButton!
@@ -16,6 +16,7 @@ class ViewController: NSViewController {
     let utils = CalloutAlarmUtils()
     
     var timer: Timer?
+    var stateManager = AlarmStateManager()
     
     var shouldSpeech: Bool {
         get {
@@ -26,10 +27,28 @@ class ViewController: NSViewController {
         }
     }
     
+    func onStartActive() {
+        NSLog("onStartActive")
+    }
+    
+    func onActive() {
+        NSLog("onActive")
+
+        if (self.shouldSpeech) {
+            NSLog(self.utils.currentTimeSpeechText)
+            // let player = SpeechPlayer(volume: self.utils.speechVolume)
+            // player.say(self.utils.currentTimeSpeechText)
+        }
+    }
+    
+    func onStartInactive() {
+        NSLog("onStartInactive")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: 読み上げ台詞キューを作成
+        self.stateManager.delegate = self
 
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             let formatter = DateFormatter()
@@ -38,16 +57,7 @@ class ViewController: NSViewController {
             let timeStr = formatter.string(from: currentDate)
             self.timeLabel.stringValue = timeStr
             
-            // TODO: 該当時刻かつ speechSwitch が ON だったら、
-            // 読み上げ台詞キューから台詞を取り出して、時刻読み上げ
-            // 範囲時間外
-            // 状態管理
-            
-            if (self.shouldSpeech) {
-                // let player = SpeechPlayer(volume: self.utils.speechVolume)
-                // player.say(self.utils.currentTimeSpeechText)
-                NSLog(self.utils.currentTimeSpeechText)
-            }
+            self.stateManager.tick()
         }
     }
     
