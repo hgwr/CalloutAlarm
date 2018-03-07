@@ -43,6 +43,8 @@ class SettingsViewController: NSViewController {
     
     @IBAction func timeSpeechTestClicked(_ sender: Any) {
         NSLog("timeSpeechTestClicked")
+        let player = SpeechPlayer(volume: utils.speechVolume)
+        player.say(utils.currentTimeSpeechText)
     }
   
     @IBAction func startSpeechTestClicked(_ sender: Any) {

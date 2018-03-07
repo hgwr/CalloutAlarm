@@ -66,6 +66,22 @@ class CalloutAlarmUtils {
         }
     }
 
+    var currentHour: Int {
+        get {
+            let now = Date()
+            let hour = calendar.component(.hour, from: now)
+            return hour
+        }
+    }
+
+    var currentMinute: Int {
+        get {
+            let now = Date()
+            let minute = calendar.component(.minute, from: now)
+            return minute
+        }
+    }
+
     var startTime: Date? {
         get {
             let startTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ??
@@ -136,6 +152,12 @@ class CalloutAlarmUtils {
             .replacingOccurrences(of: "%h", with: String(format: "%d", hour))
             .replacingOccurrences(of: "%m", with: String(format: "%d", minute))
         return text
+    }
+    
+    var currentTimeSpeechText: String {
+        get {
+            return self.timeSpeechText(hour: self.currentHour, minute: self.currentMinute)
+        }
     }
     
     // MARK: - Validation
