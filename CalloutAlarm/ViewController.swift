@@ -31,7 +31,7 @@ class ViewController: NSViewController, AlarmEventHandler {
     func onStartActive() {
         NSLog("onStartActive")
         libretto.reset()
-        // TODO: start caffeinate
+        doCaffeinate()
     }
     
     func onActive() {
@@ -45,12 +45,13 @@ class ViewController: NSViewController, AlarmEventHandler {
             }
             let player = SpeechPlayer(volume: self.utils.speechVolume)
             player.say(speechLine)
+            NSLog("onActive: say %@", speechLine)
         }
     }
     
     func onStartInactive() {
         NSLog("onStartInactive")
-        // TODO: finish caffeinate
+        unCaffeinate()
     }
     
     override func viewDidLoad() {

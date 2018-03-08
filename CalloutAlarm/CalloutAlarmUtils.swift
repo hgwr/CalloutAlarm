@@ -171,10 +171,8 @@ class CalloutAlarmUtils {
             let minute = Int(minuteStr),
             hour >= 0 && hour <= 23 &&
                 minute >= 0 && minute <= 59 {
-            NSLog("### parseTimeStr: %@ -> %d:%d", text, hour, minute)
             return [hour, minute]
         }
-        NSLog("### parseTimeStr: %@ -> nil", text)
         return nil
     }
     
