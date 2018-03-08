@@ -467,6 +467,7 @@
 				DEVELOPMENT_TEAM = T98QX37J37;
 				INFOPLIST_FILE = CalloutAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.moreslowly.CalloutAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CalloutAlarm/CalloutAlarm-Bridging-Header.h";
@@ -486,6 +487,7 @@
 				DEVELOPMENT_TEAM = T98QX37J37;
 				INFOPLIST_FILE = CalloutAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.moreslowly.CalloutAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CalloutAlarm/CalloutAlarm-Bridging-Header.h";
