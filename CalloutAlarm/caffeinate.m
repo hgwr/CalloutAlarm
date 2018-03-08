@@ -19,12 +19,15 @@ static BOOL isCaffeinateSuccess = NO;
 
 BOOL doCaffeinate() {
     NSLog(@"doCaffeinate start");
-    CFStringRef reasonForActivity= CFSTR("CalloutAlarm in action");
-    IOReturn success = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoDisplaySleep,
-                                                   kIOPMAssertionLevelOn,
-                                                   reasonForActivity,
-                                                   &assertionID);
-    isCaffeinateSuccess = (success == kIOReturnSuccess) ? YES : NO;
+    if (!isCaffeinateSuccess) {
+        CFStringRef reasonForActivity= CFSTR("CalloutAlarm in action");
+        IOReturn success = IOPMAssertionCreateWithName(kIOPMAssertionTypeNoDisplaySleep,
+                                                       kIOPMAssertionLevelOn,
+                                                       reasonForActivity,
+                                                       &assertionID);
+        isCaffeinateSuccess = (success == kIOReturnSuccess) ? YES : NO;
+        NSLog(@"doCaffeinate done");
+    }
     NSLog(@"doCaffeinate: isCaffeinateSuccess = %s, assertionID = %d",
           isCaffeinateSuccess ? "YES" : "NO",
           assertionID);
@@ -38,7 +41,8 @@ BOOL unCaffeinate() {
         isCaffeinateSuccess = NO;
         NSLog(@"unCaffeinate: IOPMAssertionRelease: assertionID = %d", assertionID);
         return (success == kIOReturnSuccess) ? YES : NO;
+    } else {
+        NSLog(@"unCaffeinate: IOPMAssertionRelease was not called: assertionID = %d", assertionID);
     }
-    NSLog(@"unCaffeinate: not IOPMAssertionRelease: assertionID = %d", assertionID);
     return NO;
 }
