@@ -15,6 +15,8 @@
 		17666A0E2048D3A3002852E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17666A0C2048D3A3002852E7 /* Main.storyboard */; };
 		17666A1A2048D3A3002852E7 /* CalloutAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17666A192048D3A3002852E7 /* CalloutAlarmTests.swift */; };
 		17666A252048D3A3002852E7 /* CalloutAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17666A242048D3A3002852E7 /* CalloutAlarmUITests.swift */; };
+		17AD91672050B91E00D8C614 /* caffeinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AD91662050B91E00D8C614 /* caffeinateTests.swift */; };
+		17AD916B2050BA9300D8C614 /* caffeinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AD916A2050BA9300D8C614 /* caffeinate.m */; };
 		17EE1835204A5CCF000C8739 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE1834204A5CCF000C8739 /* SettingsViewController.swift */; };
 		17FFC574204F63A800C1253D /* SpeechPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFC573204F63A800C1253D /* SpeechPlayer.swift */; };
 		17FFC576204F640900C1253D /* SpeechPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FFC575204F640900C1253D /* SpeechPlayerTests.swift */; };
@@ -56,6 +58,10 @@
 		17666A202048D3A3002852E7 /* CalloutAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalloutAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17666A242048D3A3002852E7 /* CalloutAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutAlarmUITests.swift; sourceTree = "<group>"; };
 		17666A262048D3A3002852E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17AD91652050B29800D8C614 /* caffeinate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caffeinate.h; sourceTree = "<group>"; };
+		17AD91662050B91E00D8C614 /* caffeinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caffeinateTests.swift; sourceTree = "<group>"; };
+		17AD91692050BA9200D8C614 /* CalloutAlarm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalloutAlarm-Bridging-Header.h"; sourceTree = "<group>"; };
+		17AD916A2050BA9300D8C614 /* caffeinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = caffeinate.m; sourceTree = "<group>"; };
 		17EE1834204A5CCF000C8739 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		17FFC573204F63A800C1253D /* SpeechPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayer.swift; sourceTree = "<group>"; };
 		17FFC575204F640900C1253D /* SpeechPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayerTests.swift; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 				171B013B204D176A00D5CA6D /* CalloutAlarmUtils.swift */,
 				17FFC577204FA28500C1253D /* AlarmStateManager.swift */,
 				17FFC579204FA96D00C1253D /* Libretto.swift */,
+				17AD91652050B29800D8C614 /* caffeinate.h */,
+				17AD916A2050BA9300D8C614 /* caffeinate.m */,
 				17FFC573204F63A800C1253D /* SpeechPlayer.swift */,
 				17666A082048D3A3002852E7 /* ViewController.swift */,
 				17EE1834204A5CCF000C8739 /* SettingsViewController.swift */,
@@ -124,6 +132,7 @@
 				17666A0C2048D3A3002852E7 /* Main.storyboard */,
 				17666A0F2048D3A3002852E7 /* Info.plist */,
 				17666A102048D3A3002852E7 /* CalloutAlarm.entitlements */,
+				17AD91692050BA9200D8C614 /* CalloutAlarm-Bridging-Header.h */,
 			);
 			path = CalloutAlarm;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 				17666A192048D3A3002852E7 /* CalloutAlarmTests.swift */,
 				17FFC575204F640900C1253D /* SpeechPlayerTests.swift */,
 				17FFC57B204FACE000C1253D /* LibrettoTests.swift */,
+				17AD91662050B91E00D8C614 /* caffeinateTests.swift */,
 				17666A1B2048D3A3002852E7 /* Info.plist */,
 			);
 			path = CalloutAlarmTests;
@@ -216,6 +226,7 @@
 				TargetAttributes = {
 					17666A022048D3A2002852E7 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					17666A142048D3A3002852E7 = {
@@ -289,6 +300,7 @@
 				17EE1835204A5CCF000C8739 /* SettingsViewController.swift in Sources */,
 				17FFC57A204FA96D00C1253D /* Libretto.swift in Sources */,
 				17FFC578204FA28500C1253D /* AlarmStateManager.swift in Sources */,
+				17AD916B2050BA9300D8C614 /* caffeinate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17FFC576204F640900C1253D /* SpeechPlayerTests.swift in Sources */,
+				17AD91672050B91E00D8C614 /* caffeinateTests.swift in Sources */,
 				17666A1A2048D3A3002852E7 /* CalloutAlarmTests.swift in Sources */,
 				17FFC57C204FACE000C1253D /* LibrettoTests.swift in Sources */,
 			);
@@ -447,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CalloutAlarm/CalloutAlarm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -455,6 +469,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.moreslowly.CalloutAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CalloutAlarm/CalloutAlarm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -463,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CalloutAlarm/CalloutAlarm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -471,6 +488,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.moreslowly.CalloutAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CalloutAlarm/CalloutAlarm-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
