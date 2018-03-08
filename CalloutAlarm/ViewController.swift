@@ -43,7 +43,7 @@ class ViewController: NSViewController, AlarmEventHandler {
             if let line = libretto.getSpeechLine() {
                 speechLine += " " + line
             }
-            if speechLine.strip.characters.count > 0 {
+            if speechLine.strip.count > 0 {
                 let player = SpeechPlayer(volume: self.utils.speechVolume)
                 player.say(speechLine)
                 NSLog("onActive: say %@", speechLine)
