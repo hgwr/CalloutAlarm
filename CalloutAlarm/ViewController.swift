@@ -54,6 +54,9 @@ class ViewController: NSViewController, AlarmEventHandler {
     func onStartInactive() {
         NSLog("onStartInactive")
         unCaffeinate()
+        
+        self.shouldSpeech = true
+        self.shouldSpeechSwitchButton.state = .on
     }
     
     override func viewDidLoad() {
@@ -75,8 +78,7 @@ class ViewController: NSViewController, AlarmEventHandler {
     override func viewWillAppear() {
         let shouldSpeech = self.shouldSpeech
         
-        self.shouldSpeechSwitchButton.state = shouldSpeech ?
-            NSControl.StateValue.on : NSControl.StateValue.off
+        self.shouldSpeechSwitchButton.state = shouldSpeech ? .on : .off
     }
 
     override var representedObject: Any? {
@@ -93,7 +95,7 @@ class ViewController: NSViewController, AlarmEventHandler {
     }
     
     @IBAction func speechSwitchClicked(_ sender: NSButton) {
-        let checked = (sender.state == NSControl.StateValue.on)
+        let checked = (sender.state == .on)
         self.shouldSpeech = checked
     }
 }
