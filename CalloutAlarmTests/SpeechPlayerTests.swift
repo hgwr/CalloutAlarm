@@ -22,6 +22,7 @@ class SpeechPlayerTests: XCTestCase {
     }
 
     func testSay() {
+        // TODO: システム環境設定の「言語と地域」で「優先する言語」を日本語にしないと、読み上げに時間がかかってタイムアウトして、このテストがコケる可能性があります。
         let player = SpeechPlayer()
         
         let speechFinishExpectation = self.expectation(description: "speech finished")

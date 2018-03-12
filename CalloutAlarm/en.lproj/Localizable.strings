@@ -9,3 +9,6 @@
 "Preferences" = "CalloutAlarm Preferences";
 "Good morning" = "Good morning!";
 "It's ... o'clock" = "The time is at %h:%m.";
+"time format alert" = "Time format should be like '07:34'.";
+"speech interval warning" = "Please enter the speech interval (seconds) in a format like '180'. Values from 30 to 7200 are valid values.";
+

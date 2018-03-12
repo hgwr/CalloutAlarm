@@ -81,53 +81,67 @@ class SettingsViewController: NSViewController {
     // MARK: - NSControl overrides
     
     override func controlTextDidEndEditing(_ notification: Notification) {
-        let userDefaults = UserDefaults.standard
-        
         switch notification.object {
-            
         case let textField as NSTextField where textField === self.startTimeStrField:
-            let fieldValue = textField.stringValue
-            if utils.validTimeFormat(fieldValue) {
-                userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.startTimeStr)
-            } else {
-                let startTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ?? CalloutAlarmDefaults.startTimeStr
-                textField.stringValue = startTimeStr
-                utils.alert("時刻は「12:34」のような形式で入力してください。")
-            }
-            
+            _ = validateAndSaveStartTime()
         case let textField as NSTextField where textField === self.finishTimeStrField:
-            let fieldValue = textField.stringValue
-            if utils.validTimeFormat(fieldValue) {
-                userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.finishTimeStr)
-            } else {
-                let finishTimeStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.finishTimeStr) ?? CalloutAlarmDefaults.finishTimeStr
-                textField.stringValue = finishTimeStr
-                utils.alert("時刻は「12:34」のような形式で入力してください。")
-            }
-            
+            _ = validateAndSaveFinishTime()
         case let textField as NSTextField where textField === self.speechIntervalStrField:
-            let fieldValue = textField.stringValue
-            if let matches = fieldValue.strip.matches(for: "^([0-9]+)$"),
-                matches.count == 2,
-                let intervalSec = Int(matches[1]),
-                intervalSec >= 30 && intervalSec <= 60 * 60 * 2 {
-                userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.speechIntervalStr)
-            } else {
-                let speechIntervalStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.speechIntervalStr) ?? CalloutAlarmDefaults.speechIntervalStr
-                textField.stringValue = speechIntervalStr
-                utils.alert("読み上げ間隔(秒)は、「180」のような形式で入力してください。30 から 7200 が有効な値です。")
-            }
-            
+            _ = validateAndSaveSpeechInterval()
         case let textField as NSTextField where textField === self.speechTextAtTheStartField:
-            let fieldValue = textField.stringValue
-            userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.speechTextAtTheStart)
-            
+            saveSpeechTextAtTheStart()
         case let textField as NSTextField where textField === self.timeSpeechFormatField:
-            let fieldValue = textField.stringValue
-            userDefaults.set(fieldValue.strip, forKey: CalloutAlarmKeys.timeSpeechFormat)
-            
+            saveTimeSpeechFormat()
         default:
             break
+        }
+    }
+    
+    // MARK: - validators
+    
+    func validateAndSaveStartTime() -> Bool {
+        let fieldValue = startTimeStrField.stringValue
+        if utils.validTimeFormat(fieldValue) {
+            UserDefaults.standard.set(fieldValue.strip, forKey: CalloutAlarmKeys.startTimeStr)
+            return true
+        } else {
+            let startTimeStr: String =
+                UserDefaults.standard.string(forKey: CalloutAlarmKeys.startTimeStr) ??
+                    CalloutAlarmDefaults.startTimeStr
+            startTimeStrField.stringValue = startTimeStr
+            utils.alert(NSLocalizedString("time format alert", comment: ""))
+            return false
+        }
+    }
+    
+    func validateAndSaveFinishTime() -> Bool {
+        let fieldValue = finishTimeStrField.stringValue
+        if utils.validTimeFormat(fieldValue) {
+            UserDefaults.standard.set(fieldValue.strip, forKey: CalloutAlarmKeys.finishTimeStr)
+            return true
+        } else {
+            let finishTimeStr: String =
+                UserDefaults.standard.string(forKey: CalloutAlarmKeys.finishTimeStr) ??
+                    CalloutAlarmDefaults.finishTimeStr
+            finishTimeStrField.stringValue = finishTimeStr
+            utils.alert(NSLocalizedString("time format alert", comment: ""))
+            return false
+        }
+    }
+    
+    func validateAndSaveSpeechInterval() -> Bool {
+        let fieldValue = speechIntervalStrField.stringValue
+        if let matches = fieldValue.strip.matches(for: "^([0-9]+)$"),
+            matches.count == 2,
+            let intervalSec = Int(matches[1]),
+            intervalSec >= 30 && intervalSec <= 60 * 60 * 2 {
+            UserDefaults.standard.set(fieldValue.strip, forKey: CalloutAlarmKeys.speechIntervalStr)
+            return true
+        } else {
+            let speechIntervalStr: String = UserDefaults.standard.string(forKey: CalloutAlarmKeys.speechIntervalStr) ?? CalloutAlarmDefaults.speechIntervalStr
+            speechIntervalStrField.stringValue = speechIntervalStr
+            utils.alert(NSLocalizedString("speech interval warning", comment: ""))
+            return false
         }
     }
     
@@ -135,4 +149,17 @@ class SettingsViewController: NSViewController {
         NSLog("SettingsViewController: validateData() called")
         return true
     }
+    
+    // MARK: - UserDefaults savers
+    
+    func saveSpeechTextAtTheStart() {
+        let fieldValue = speechTextAtTheStartField.stringValue
+        UserDefaults.standard.set(fieldValue.strip, forKey: CalloutAlarmKeys.speechTextAtTheStart)
+    }
+    
+    func saveTimeSpeechFormat() {
+        let fieldValue = timeSpeechFormatField.stringValue
+        UserDefaults.standard.set(fieldValue.strip, forKey: CalloutAlarmKeys.timeSpeechFormat)
+    }
+    
 }

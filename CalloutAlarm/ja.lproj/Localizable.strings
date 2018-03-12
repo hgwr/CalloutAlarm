@@ -9,3 +9,5 @@
 "Preferences" = "CalloutAlarm 設定";
 "Good morning" = "おはようございます。";
 "It's ... o'clock" = "時刻は %h 時 %m 分です。";
+"time format alert" = "時刻は「12:34」のような形式で入力してください。";
+"speech interval warning" = "読み上げ間隔(秒)は、「180」のような形式で入力してください。30 から 7200 が有効な値です。";
