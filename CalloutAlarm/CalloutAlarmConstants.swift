@@ -23,7 +23,7 @@ struct CalloutAlarmDefaults {
     static let startTimeStr = "07:00"
     static let finishTimeStr = "08:01"
     static let speechIntervalStr = "180"
-    static let speechTextAtTheStart = "おはようございます"
-    static let timeSpeechFormat = "時刻は %h 時 %m 分です。"
+    static let speechTextAtTheStart = NSLocalizedString("Good morning", comment: "")
+    static let timeSpeechFormat = NSLocalizedString("It's ... o'clock", comment: "")
     static let volume: Int = 90
 }

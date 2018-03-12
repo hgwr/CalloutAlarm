@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CalloutAlarm
+
+  Created by Shigeru Hagiwara on 2018/03/12.
+  Copyright © 2018年 Shigeru Hagiwara. All rights reserved.
+*/
+
+"Good morning" = "おはようございます。";
+"It's ... o'clock" = "時刻は %%h 時 %%m 分です。";
