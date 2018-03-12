@@ -43,6 +43,11 @@ class SettingsViewController: NSViewController {
         self.volumeSlider.integerValue = userDefaults.integer(forKey: CalloutAlarmKeys.volume)
     }
     
+    override func viewWillDisappear() {
+        // TODO: validation
+        UserDefaults.standard.synchronize()
+    }
+    
     @IBAction func timeSpeechTestClicked(_ sender: Any) {
         NSLog("timeSpeechTestClicked")
         let player = SpeechPlayer(volume: utils.speechVolume)

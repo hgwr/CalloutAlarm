@@ -8,4 +8,4 @@
 
 "Preferences" = "CalloutAlarm Preferences";
 "Good morning" = "Good morning!";
-"It's ... o'clock" = "The time is at %%h:%%m.";
+"It's ... o'clock" = "The time is at %h:%m.";
