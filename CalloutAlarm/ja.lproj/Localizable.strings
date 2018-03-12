@@ -6,5 +6,6 @@
   Copyright © 2018年 Shigeru Hagiwara. All rights reserved.
 */
 
+"Preferences" = "CalloutAlarm 設定";
 "Good morning" = "おはようございます。";
 "It's ... o'clock" = "時刻は %%h 時 %%m 分です。";

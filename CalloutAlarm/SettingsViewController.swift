@@ -23,6 +23,8 @@ class SettingsViewController: NSViewController {
     }
     
     override func viewWillAppear() {
+        self.view.window?.title = NSLocalizedString("Preferences", comment: "")
+        
         let userDefaults = UserDefaults.standard
         guard
             let startTimeStr = userDefaults.string(forKey: CalloutAlarmKeys.startTimeStr),
