@@ -9,6 +9,9 @@
 import Cocoa
 
 class SettingsViewController: NSViewController {
+    
+    // MARK: - instance variables
+
     @IBOutlet weak var startTimeStrField: NSTextField!
     @IBOutlet weak var finishTimeStrField: NSTextField!
     @IBOutlet weak var speechIntervalStrField: NSTextField!
@@ -17,6 +20,8 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var volumeSlider: NSSlider!
     
     let utils = CalloutAlarmUtils()
+    
+    // MARK: - NSViewController overrides
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +54,8 @@ class SettingsViewController: NSViewController {
         UserDefaults.standard.synchronize()
     }
     
+    // MARK: - Actions
+    
     @IBAction func timeSpeechTestClicked(_ sender: Any) {
         NSLog("timeSpeechTestClicked")
         let player = SpeechPlayer(volume: utils.speechVolume)
@@ -70,6 +77,8 @@ class SettingsViewController: NSViewController {
     @IBAction func okButtonClicked(_ sender: Any) {
         self.view.window!.performClose(self)
     }
+    
+    // MARK: - NSControl overrides
     
     override func controlTextDidEndEditing(_ notification: Notification) {
         let userDefaults = UserDefaults.standard
