@@ -45,6 +45,7 @@ class SettingsViewController: NSViewController {
     
     override func viewWillDisappear() {
         // TODO: validation
+        NSLog("SettingsViewController: preference window viewWillDisappear")
         UserDefaults.standard.synchronize()
     }
     
@@ -67,7 +68,7 @@ class SettingsViewController: NSViewController {
     }
     
     @IBAction func okButtonClicked(_ sender: Any) {
-        self.view.window!.close()
+        self.view.window!.performClose(self)
     }
     
     override func controlTextDidEndEditing(_ notification: Notification) {
@@ -119,5 +120,10 @@ class SettingsViewController: NSViewController {
         default:
             break
         }
+    }
+    
+    func validateData() -> Bool {
+        NSLog("SettingsViewController: validateData() called")
+        return true
     }
 }

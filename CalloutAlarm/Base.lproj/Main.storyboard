@@ -163,7 +163,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="SettingsWindowController" customModule="CalloutAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -195,7 +195,7 @@
                                 <rect key="frame" x="20" y="56" width="624" height="225"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-aC-HZ1">
-                                        <rect key="frame" x="0.0" y="203" width="615" height="22"/>
+                                        <rect key="frame" x="0.0" y="203" width="624" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xUY-8q-OCw">
                                                 <rect key="frame" x="-2" y="3" width="179" height="17"/>
@@ -206,7 +206,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="startTimeStrField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pdm-yN-INI">
-                                                <rect key="frame" x="183" y="0.0" width="432" height="22"/>
+                                                <rect key="frame" x="183" y="0.0" width="441" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="07:00" drawsBackground="YES" id="eHj-oq-aDj">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -227,7 +227,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL4-a7-xsL">
-                                        <rect key="frame" x="0.0" y="173" width="620" height="22"/>
+                                        <rect key="frame" x="0.0" y="173" width="624" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-kk-tqy">
                                                 <rect key="frame" x="-2" y="3" width="184" height="17"/>
@@ -238,7 +238,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="finishTimeStrField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gYJ-Co-tvy">
-                                                <rect key="frame" x="188" y="0.0" width="432" height="22"/>
+                                                <rect key="frame" x="188" y="0.0" width="436" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="08:01" drawsBackground="YES" id="jwH-Mx-RfC">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -259,7 +259,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYu-6P-eog">
-                                        <rect key="frame" x="0.0" y="143" width="609" height="22"/>
+                                        <rect key="frame" x="0.0" y="143" width="624" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-jy-kmi">
                                                 <rect key="frame" x="-2" y="3" width="169" height="17"/>
@@ -270,7 +270,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-2j-opA">
-                                                <rect key="frame" x="173" y="0.0" width="436" height="22"/>
+                                                <rect key="frame" x="173" y="0.0" width="451" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="TNh-GW-uWf">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -291,7 +291,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csu-eN-5ew">
-                                        <rect key="frame" x="0.0" y="113" width="488" height="22"/>
+                                        <rect key="frame" x="0.0" y="113" width="624" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mId-I4-iVC">
                                                 <rect key="frame" x="-2" y="3" width="148" height="17"/>
@@ -302,7 +302,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="timeSpeechFormatField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-ip-bEh">
-                                                <rect key="frame" x="152" y="0.0" width="336" height="22"/>
+                                                <rect key="frame" x="152" y="0.0" width="472" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="The time is at %h:%m." drawsBackground="YES" id="gCS-kd-Jgm">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -375,7 +375,7 @@
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-MC-rnA">
-                                        <rect key="frame" x="0.0" y="0.0" width="564" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="624" height="17"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5C6-uR-1X1">
                                                 <rect key="frame" x="-2" y="0.0" width="49" height="17"/>
@@ -386,7 +386,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DEE-QW-6c1">
-                                                <rect key="frame" x="51" y="-1" width="515" height="19"/>
+                                                <rect key="frame" x="51" y="-1" width="575" height="19"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="77v-eG-7rR"/>
                                                 <connections>
                                                     <action selector="volumeSliderChanged:" target="XfG-lQ-9wD" id="auU-eU-228"/>
