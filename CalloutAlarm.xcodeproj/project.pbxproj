@@ -62,6 +62,7 @@
 		17AD91662050B91E00D8C614 /* caffeinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caffeinateTests.swift; sourceTree = "<group>"; };
 		17AD91692050BA9200D8C614 /* CalloutAlarm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalloutAlarm-Bridging-Header.h"; sourceTree = "<group>"; };
 		17AD916A2050BA9300D8C614 /* caffeinate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = caffeinate.m; sourceTree = "<group>"; };
+		17BFC24D2056476300A7B523 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		17EE1834204A5CCF000C8739 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		17FFC573204F63A800C1253D /* SpeechPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayer.swift; sourceTree = "<group>"; };
 		17FFC575204F640900C1253D /* SpeechPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlayerTests.swift; sourceTree = "<group>"; };
@@ -343,6 +344,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				17666A0D2048D3A3002852E7 /* Base */,
+				17BFC24D2056476300A7B523 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -354,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -411,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
