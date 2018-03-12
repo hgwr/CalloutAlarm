@@ -12,14 +12,13 @@ import AppKit
 class SpeechPlayer: NSObject, NSSpeechSynthesizerDelegate {
     static let defaultRate: Float = 160
     static let defaultVolume: Float = 0.9
-    static let kyoko = "com.apple.speech.synthesis.voice.kyoko"
     
     let speechSynth: NSSpeechSynthesizer?
     
     var speechFinishCallback: ((SpeechPlayer) -> ())?
     
     init(volume: Float) {
-        let voiceName = NSSpeechSynthesizer.VoiceName(rawValue: SpeechPlayer.kyoko)
+        let voiceName = NSSpeechSynthesizer.defaultVoice
         self.speechSynth = NSSpeechSynthesizer(voice: voiceName)
         super.init()
         if let ss = self.speechSynth {
