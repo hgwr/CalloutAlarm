@@ -188,25 +188,25 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="SettingsViewController" customModule="CalloutAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="584" height="301"/>
+                        <rect key="frame" x="0.0" y="0.0" width="664" height="301"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2E-1r-10N">
-                                <rect key="frame" x="20" y="56" width="544" height="225"/>
+                                <rect key="frame" x="20" y="56" width="624" height="225"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9V-aC-HZ1">
-                                        <rect key="frame" x="0.0" y="203" width="544" height="22"/>
+                                        <rect key="frame" x="0.0" y="203" width="615" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xUY-8q-OCw">
-                                                <rect key="frame" x="-2" y="3" width="108" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ開始時刻: " id="ncw-XM-yfA">
+                                                <rect key="frame" x="-2" y="3" width="179" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Start time of speech output: " id="ncw-XM-yfA">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="startTimeStrField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pdm-yN-INI">
-                                                <rect key="frame" x="112" y="0.0" width="432" height="22"/>
+                                                <rect key="frame" x="183" y="0.0" width="432" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="07:00" drawsBackground="YES" id="eHj-oq-aDj">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -227,18 +227,18 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nL4-a7-xsL">
-                                        <rect key="frame" x="0.0" y="173" width="544" height="22"/>
+                                        <rect key="frame" x="0.0" y="173" width="620" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-kk-tqy">
-                                                <rect key="frame" x="-2" y="3" width="108" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ終了時刻: " id="0w8-Ce-Ryh">
+                                                <rect key="frame" x="-2" y="3" width="184" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Finish time of speech output: " id="0w8-Ce-Ryh">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="finishTimeStrField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gYJ-Co-tvy">
-                                                <rect key="frame" x="112" y="0.0" width="432" height="22"/>
+                                                <rect key="frame" x="188" y="0.0" width="432" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="08:01" drawsBackground="YES" id="jwH-Mx-RfC">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -259,18 +259,18 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYu-6P-eog">
-                                        <rect key="frame" x="0.0" y="143" width="544" height="22"/>
+                                        <rect key="frame" x="0.0" y="143" width="609" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-jy-kmi">
-                                                <rect key="frame" x="-2" y="3" width="104" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ間隔(秒): " id="d3z-0q-sL0">
+                                                <rect key="frame" x="-2" y="3" width="169" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Speech interval (seconds): " id="d3z-0q-sL0">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-2j-opA">
-                                                <rect key="frame" x="108" y="0.0" width="436" height="22"/>
+                                                <rect key="frame" x="173" y="0.0" width="436" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="TNh-GW-uWf">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -291,19 +291,19 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csu-eN-5ew">
-                                        <rect key="frame" x="0.0" y="113" width="544" height="22"/>
+                                        <rect key="frame" x="0.0" y="113" width="488" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mId-I4-iVC">
-                                                <rect key="frame" x="-2" y="3" width="204" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="時刻読み上げセリフのフォーマット: " id="qBp-3f-dMS">
+                                                <rect key="frame" x="-2" y="3" width="148" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Format of time speech: " id="qBp-3f-dMS">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="timeSpeechFormatField" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-ip-bEh">
-                                                <rect key="frame" x="208" y="0.0" width="336" height="22"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="時刻は %h 時 %m 分です。" drawsBackground="YES" id="gCS-kd-Jgm">
+                                                <rect key="frame" x="152" y="0.0" width="336" height="22"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="The time is at %h:%m." drawsBackground="YES" id="gCS-kd-Jgm">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -323,8 +323,8 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cge-Zt-ZTs">
-                                        <rect key="frame" x="-6" y="77" width="149" height="32"/>
-                                        <buttonCell key="cell" type="push" title="時刻読み上げテスト" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bb0-Bg-4xH">
+                                        <rect key="frame" x="-6" y="77" width="193" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Test time speech reading" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bb0-Bg-4xH">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -333,19 +333,19 @@
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-lY-mqx">
-                                        <rect key="frame" x="0.0" y="54" width="544" height="22"/>
+                                        <rect key="frame" x="0.0" y="54" width="624" height="22"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ORJ-mB-Dlw">
-                                                <rect key="frame" x="-2" y="3" width="144" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="読み上げ開始時のセリフ: " id="OLE-kt-z2v">
+                                                <rect key="frame" x="-2" y="3" width="224" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Speech at the beginning of reading: " id="OLE-kt-z2v">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <textField identifier="speechTextAtTheStart" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8rj-c3-fqn">
-                                                <rect key="frame" x="148" y="0.0" width="396" height="22"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="おはようございます" drawsBackground="YES" id="XeM-VO-hw7">
+                                                <rect key="frame" x="228" y="0.0" width="396" height="22"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Good morning!" drawsBackground="YES" id="XeM-VO-hw7">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -365,8 +365,8 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bme-VX-p4H">
-                                        <rect key="frame" x="-6" y="18" width="173" height="32"/>
-                                        <buttonCell key="cell" type="push" title="開始時のセリフのテスト" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZHc-TO-xgz">
+                                        <rect key="frame" x="-6" y="18" width="184" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Test speech at the start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZHc-TO-xgz">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -375,18 +375,18 @@
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-MC-rnA">
-                                        <rect key="frame" x="0.0" y="0.0" width="544" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="564" height="17"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5C6-uR-1X1">
-                                                <rect key="frame" x="-2" y="0.0" width="29" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="音量" id="ebb-Qm-12T">
+                                                <rect key="frame" x="-2" y="0.0" width="49" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Volume" id="ebb-Qm-12T">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DEE-QW-6c1">
-                                                <rect key="frame" x="31" y="-1" width="515" height="19"/>
+                                                <rect key="frame" x="51" y="-1" width="515" height="19"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="77v-eG-7rR"/>
                                                 <connections>
                                                     <action selector="volumeSliderChanged:" target="XfG-lQ-9wD" id="auU-eU-228"/>
@@ -425,7 +425,7 @@
                                 </customSpacing>
                             </stackView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Hw-nz-Whx">
-                                <rect key="frame" x="263" y="8" width="59" height="32"/>
+                                <rect key="frame" x="303" y="8" width="59" height="32"/>
                                 <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gR9-Ic-RcY">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -512,8 +512,8 @@ DQ
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yDd-lv-TL3">
-                                        <rect key="frame" x="121" y="-7" width="65" height="32"/>
-                                        <buttonCell key="cell" type="push" title="設定" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BH1-t2-QGN">
+                                        <rect key="frame" x="91" y="-7" width="125" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Preferences..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BH1-t2-QGN">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
