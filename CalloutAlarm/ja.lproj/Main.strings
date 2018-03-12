@@ -12,73 +12,73 @@
 "2Va-xn-FPa.title" = "CalloutAlarm";
 
 /* Class = "NSMenuItem"; title = "Quit CalloutAlarm"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quit CalloutAlarm";
+"4sb-4s-VLi.title" = "CalloutAlarm を終了";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
-"5QF-Oa-p0T.title" = "Edit";
+"5QF-Oa-p0T.title" = "編集";
 
 /* Class = "NSMenuItem"; title = "About CalloutAlarm"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "About CalloutAlarm";
+"5kV-Vb-QxS.title" = "CalloutAlarm について...";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
-"6dh-zS-Vam.title" = "Redo";
+"6dh-zS-Vam.title" = "やり直す";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
-"AYu-sK-qS6.title" = "Main Menu";
+"AYu-sK-qS6.title" = "メインメニュー";
 
 /* Class = "NSButtonCell"; title = "設定"; ObjectID = "BH1-t2-QGN"; */
 "BH1-t2-QGN.title" = "設定";
 
 /* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
-"BOF-NM-1cW.title" = "Preferences…";
+"BOF-NM-1cW.title" = "環境設定…";
 
 /* Class = "NSButtonCell"; title = "時刻読み上げテスト"; ObjectID = "Bb0-Bg-4xH"; */
 "Bb0-Bg-4xH.title" = "時刻読み上げテスト";
 
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
-"F2S-fz-NVQ.title" = "Help";
+"F2S-fz-NVQ.title" = "ヘルプ";
 
 /* Class = "NSMenuItem"; title = "CalloutAlarm Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "CalloutAlarm Help";
+"FKE-Sm-Kum.title" = "CalloutAlarm ヘルプ";
 
 /* Class = "NSWindow"; title = "CalloutAlarm 設定"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "CalloutAlarm 設定";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
-"Kd2-mp-pUS.title" = "Show All";
+"Kd2-mp-pUS.title" = "すべてを表示";
 
 /* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
-"LE2-aR-0XJ.title" = "Bring All to Front";
+"LE2-aR-0XJ.title" = "すべてを手前に移動";
 
 /* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
-"NMo-om-nkz.title" = "Services";
+"NMo-om-nkz.title" = "サービス";
 
 /* Class = "NSTextFieldCell"; title = "読み上げ開始時のセリフ: "; ObjectID = "OLE-kt-z2v"; */
 "OLE-kt-z2v.title" = "読み上げ開始時のセリフ: ";
 
 /* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
-"OY7-WF-poV.title" = "Minimize";
+"OY7-WF-poV.title" = "最小化";
 
 /* Class = "NSMenuItem"; title = "Hide CalloutAlarm"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Hide CalloutAlarm";
+"Olw-nP-bQN.title" = "CalloutAlarm を隠す";
 
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
-"R4o-n2-Eq4.title" = "Zoom";
+"R4o-n2-Eq4.title" = "ズーム";
 
 /* Class = "NSMenuItem"; title = "Select All"; ObjectID = "Ruw-6m-B2m"; */
-"Ruw-6m-B2m.title" = "Select All";
+"Ruw-6m-B2m.title" = "すべてを選択";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
-"Td7-aD-5lo.title" = "Window";
+"Td7-aD-5lo.title" = "ウィンドウ";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
-"Vdr-fp-XzO.title" = "Hide Others";
+"Vdr-fp-XzO.title" = "他を隠す";
 
 /* Class = "NSMenu"; title = "Edit"; ObjectID = "W48-6f-4Dl"; */
-"W48-6f-4Dl.title" = "Edit";
+"W48-6f-4Dl.title" = "編集";
 
 /* Class = "NSMenuItem"; title = "Paste and Match Style"; ObjectID = "WeT-3V-zwk"; */
-"WeT-3V-zwk.title" = "Paste and Match Style";
+"WeT-3V-zwk.title" = "ペーストしてスタイルをあわせる";
 
 /* Class = "NSTextFieldCell"; placeholderString = "おはようございます"; ObjectID = "XeM-VO-hw7"; */
 "XeM-VO-hw7.placeholderString" = "おはようございます";
@@ -87,13 +87,13 @@
 "ZHc-TO-xgz.title" = "開始時のセリフのテスト";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
-"aUF-d1-5bR.title" = "Window";
+"aUF-d1-5bR.title" = "ウィンドウ";
 
 /* Class = "NSTextFieldCell"; title = "読み上げ間隔(秒): "; ObjectID = "d3z-0q-sL0"; */
 "d3z-0q-sL0.title" = "読み上げ間隔(秒): ";
 
 /* Class = "NSMenuItem"; title = "Undo"; ObjectID = "dRJ-4n-Yzg"; */
-"dRJ-4n-Yzg.title" = "Undo";
+"dRJ-4n-Yzg.title" = "元に戻す";
 
 /* Class = "NSTextFieldCell"; placeholderString = "07:00"; ObjectID = "eHj-oq-aDj"; */
 "eHj-oq-aDj.placeholderString" = "07:00";
@@ -108,10 +108,10 @@
 "gR9-Ic-RcY.title" = "OK";
 
 /* Class = "NSMenuItem"; title = "Paste"; ObjectID = "gVA-U4-sdL"; */
-"gVA-U4-sdL.title" = "Paste";
+"gVA-U4-sdL.title" = "貼り付け";
 
 /* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
-"hz9-B4-Xy5.title" = "Services";
+"hz9-B4-Xy5.title" = "サービス";
 
 /* Class = "NSTextFieldCell"; placeholderString = "08:01"; ObjectID = "jwH-Mx-RfC"; */
 "jwH-Mx-RfC.placeholderString" = "08:01";
@@ -120,7 +120,7 @@
 "ncw-XM-yfA.title" = "読み上げ開始時刻: ";
 
 /* Class = "NSMenuItem"; title = "Delete"; ObjectID = "pa3-QI-u2k"; */
-"pa3-QI-u2k.title" = "Delete";
+"pa3-QI-u2k.title" = "削除";
 
 /* Class = "NSTextFieldCell"; title = "時刻読み上げセリフのフォーマット: "; ObjectID = "qBp-3f-dMS"; */
 "qBp-3f-dMS.title" = "時刻読み上げセリフのフォーマット: ";
@@ -129,10 +129,10 @@
 "uQy-DD-JDr.title" = "CalloutAlarm";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
-"uRl-iY-unG.title" = "Cut";
+"uRl-iY-unG.title" = "切り取り";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
-"wpr-3q-Mcd.title" = "Help";
+"wpr-3q-Mcd.title" = "ヘルプ";
 
 /* Class = "NSMenuItem"; title = "Copy"; ObjectID = "x3v-GG-iWU"; */
-"x3v-GG-iWU.title" = "Copy";
+"x3v-GG-iWU.title" = "コピー";
