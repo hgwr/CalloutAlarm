@@ -19,3 +19,7 @@ https://github.com/hgwr/CalloutAlarm/issues
 ## Keywords
 
 Alarm clock, clock, alarm, human voice time reading
+
+## App Store
+
+https://itunes.apple.com/us/app/calloutalarm/id1356961336

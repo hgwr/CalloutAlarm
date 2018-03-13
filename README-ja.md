@@ -37,3 +37,7 @@ https://github.com/hgwr/CalloutAlarm/issues
 ## キーワード
 
 目覚まし, 時計, 目覚まし時計, アラーム, 時刻読み上げ
+
+## App Store
+
+https://itunes.apple.com/jp/app/calloutalarm/id1356961336?l=ja&ls=1&mt=12
