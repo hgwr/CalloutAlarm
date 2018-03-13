@@ -12,8 +12,6 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        NSLog("### applicationDidFinishLaunching called")
-        
         let userDefaults = UserDefaults.standard
         let defaults: [String:Any] =
             [CalloutAlarmKeys.shouldSpeech: CalloutAlarmDefaults.shouldSpeech,

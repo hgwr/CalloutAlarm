@@ -49,28 +49,23 @@ class SettingsViewController: NSViewController {
     }
     
     override func viewWillDisappear() {
-        NSLog("SettingsViewController: preference window viewWillDisappear")
         UserDefaults.standard.synchronize()
     }
     
     // MARK: - Actions
     
     @IBAction func timeSpeechTestClicked(_ sender: Any) {
-        NSLog("timeSpeechTestClicked")
         let player = SpeechPlayer(volume: utils.speechVolume)
         player.say(utils.currentTimeSpeechText)
     }
   
     @IBAction func startSpeechTestClicked(_ sender: Any) {
-        NSLog("startSpeechTestClicked: volume = %f", utils.speechVolume)
         let player = SpeechPlayer(volume: utils.speechVolume)
         player.say(utils.speechTextAtTheStart)
     }
     
     @IBAction func volumeSliderChanged(_ sender: NSSlider) {
         UserDefaults.standard.set(self.volumeSlider.integerValue, forKey: CalloutAlarmKeys.volume)
-        NSLog("volumeSliderChanged: self.volumeSlider.integerValue = %d", self.volumeSlider.integerValue)
-        NSLog("utils.speechVolume = %f", utils.speechVolume)
     }
     
     @IBAction func okButtonClicked(_ sender: Any) {
