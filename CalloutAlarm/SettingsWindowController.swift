@@ -15,8 +15,7 @@ class SettingsWindowController: NSWindowController, NSWindowDelegate {
     }
 
     func windowShouldClose(_ sender: NSWindow) -> Bool {
-        NSLog("#### SettingsWindowController: windowShouldClose called")
         let vc = self.contentViewController as! SettingsViewController
-        return vc.validateData()
+        return vc.validateDataAndSave()
     }
 }

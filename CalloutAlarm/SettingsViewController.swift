@@ -49,7 +49,6 @@ class SettingsViewController: NSViewController {
     }
     
     override func viewWillDisappear() {
-        // TODO: validation
         NSLog("SettingsViewController: preference window viewWillDisappear")
         UserDefaults.standard.synchronize()
     }
@@ -146,8 +145,9 @@ class SettingsViewController: NSViewController {
     }
     
     func validateData() -> Bool {
-        NSLog("SettingsViewController: validateData() called")
-        return true
+        return (validateAndSaveStartTime() &&
+            validateAndSaveFinishTime() &&
+            validateAndSaveSpeechInterval())
     }
     
     // MARK: - UserDefaults savers
@@ -160,6 +160,12 @@ class SettingsViewController: NSViewController {
     func saveTimeSpeechFormat() {
         let fieldValue = timeSpeechFormatField.stringValue
         UserDefaults.standard.set(fieldValue.strip, forKey: CalloutAlarmKeys.timeSpeechFormat)
+    }
+    
+    func validateDataAndSave() -> Bool {
+        saveSpeechTextAtTheStart()
+        saveTimeSpeechFormat()
+        return validateData()
     }
     
 }
