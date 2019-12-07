@@ -74,7 +74,7 @@ class SettingsViewController: NSViewController {
     
     // MARK: - NSControl overrides
     
-    override func controlTextDidEndEditing(_ notification: Notification) {
+    func controlTextDidEndEditing(_ notification: Notification) {
         switch notification.object {
         case let textField as NSTextField where textField === self.startTimeStrField:
             _ = validateAndSaveStartTime()
